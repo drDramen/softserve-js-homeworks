@@ -38,13 +38,13 @@ console.log(isAdult);
 let myName, myLastname, myGroup, myYearOfAge;
 
 myName = 'Volodymyr';
-myLastname = 'Palchyn';
+mySurname = 'Palchyn';
 myGroup = 'Lv-654';
 myYearOfAge = 1985;
 
 let isMarried = true;
 
-console.log(myYearOfAge, isMarried, myName, myLastname, myGroup);
+console.log(myYearOfAge, isMarried, myName, mySurname, myGroup);
 
 let address = null,
     company;
