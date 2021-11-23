@@ -70,14 +70,14 @@ document.write(
 
 //task8
 
-const secondsInminute = 60;
+const secondsInMinute = 60;
 
-let secondsInhour, secondsInDay, secondsInMonth;
+let secondsInHour, secondsInDay, secondsInMonth;
 
-secondsInhour = secondsInminute * 60;
+secondsInHour = secondsInMinute * 60;
 secondsInDay = secondsInhour * 24;
 secondsInMonth = secondsInDay * 30;
 
-document.write('<p> Seconds in hour: ' + secondsInhour + '</p>');
+document.write('<p> Seconds in hour: ' + secondsInHour + '</p>');
 document.write('<p> Seconds in day: ' + secondsInDay + '</p>');
 document.write('<p> Seconds in month: ' + secondsInMonth + '</p>');
