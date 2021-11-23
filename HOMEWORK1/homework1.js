@@ -35,7 +35,7 @@ console.log(isAdult);
 
 //task6
 
-let myName, myLastname, myGroup, myYearOfAge;
+let myName, mySurname, myGroup, myYearOfAge;
 
 myName = 'Volodymyr';
 mySurname = 'Palchyn';
