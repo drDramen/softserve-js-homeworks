@@ -19,12 +19,12 @@ document.write('<p>Second variable: ' + v2 + '</p>');
 
 //task4
 
-const person = {
-    name: 'Vova',
-    age: 36,
-    isMarried: true,
-    address: null,
-    company: undefined
+const obj = {
+    String: 'Vova',
+    Number: 36,
+    Boolean: true,
+    Undefined: undefined,
+    Null: null,
 };
 
 //task5
