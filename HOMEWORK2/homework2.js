@@ -94,6 +94,7 @@ triangle.push(+prompt('Enter the length of the triangle side. b ='));
 triangle.push(+prompt('Enter the length of the triangle side. c ='));
 
 triangle.sort((a, b) => a - b);
+console.log(triangle);
 
 isCorrect = triangle.every((item) => typeof item == 'number') && triangle[0] + triangle[1] > triangle[2];
 
@@ -106,7 +107,7 @@ if (isCorrect) {
         }, halfPerimetr)
     ).toFixed(3);
 
-    isRectangular = triangle[0] ** 2 === triangle[1] ** 2 + triangle[2] ** 2;
+    isRectangular = (triangle[2] ** 2).toFixed(2) === (triangle[0] ** 2 + triangle[1] ** 2).toFixed(2);
 
     console.log('Square of a triangle: ' + square);
     console.log('Triangle is rectangular?: ' + isRectangular);
