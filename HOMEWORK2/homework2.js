@@ -25,18 +25,18 @@ let inputData = prompt('Enter the number!');
 
 console.log('Input data: ' + inputData);
 if (inputData != '' && inputData != null && !isNaN(inputData)) {
-    if (inputData % 2 === 0 && inputData > 0) {
-        console.log('The number is positive and even !');
-    } else {
-        console.log("The number isn't positive or even !");
-    }
-    if (inputData % 7 === 0) {
-        console.log('The number is multiple of seven !');
-    } else {
-        console.log("The number isn't multiple of 7 !");
-    }
+  if (inputData % 2 === 0 && inputData > 0) {
+    console.log('The number is positive and even !');
+  } else {
+    console.log("The number isn't positive or even !");
+  }
+  if (inputData % 7 === 0) {
+    console.log('The number is multiple of seven !');
+  } else {
+    console.log("The number isn't multiple of 7 !");
+  }
 } else {
-    console.log('Input data is wrong ! (not Number)');
+  console.log('Input data is wrong ! (not Number)');
 }
 
 // task-3
@@ -74,9 +74,9 @@ let answer = null;
 //isAdult != '' && isAdult != null && !isNaN(inputData) &&
 
 if (isAdult > 0) {
-    answer = isAdult >= 18 ? 'You are an adult.' : "You're still too young.";
+  answer = isAdult >= 18 ? 'You are an adult.' : "You're still too young.";
 } else {
-    answer = 'Input data is wrong ! (it must be a positive number)';
+  answer = 'Input data is wrong ! (it must be a positive number)';
 }
 
 console.log(answer);
@@ -94,25 +94,33 @@ triangle.push(+prompt('Enter the length of the triangle side. b ='));
 triangle.push(+prompt('Enter the length of the triangle side. c ='));
 
 triangle.sort((a, b) => a - b);
-console.log(triangle);
+isCorrect = triangle[0] + triangle[1] > triangle[2];
 
-isCorrect = triangle.every((item) => typeof item == 'number') && triangle[0] + triangle[1] > triangle[2];
+// isCorrect = triangle.every((item) => typeof item == 'number') && triangle[0] + triangle[1] > triangle[2];
+
+//isCorrect = !triangle.some((item) => isNaN(item)) && triangle[0] + triangle[1] > triangle[2];
 
 if (isCorrect) {
-    let halfPerimetr = triangle.reduce((previousValue, currentValue) => previousValue + currentValue, 0) / 2;
+  let halfPerimetr =
+    triangle.reduce(
+      (previousValue, currentValue) => previousValue + currentValue,
+      0
+    ) / 2;
 
-    square = Math.sqrt(
-        triangle.reduce((previousValue, currentValue) => {
-            return previousValue * (halfPerimetr - currentValue);
-        }, halfPerimetr)
-    ).toFixed(3);
+  square = Math.sqrt(
+    triangle.reduce((previousValue, currentValue) => {
+      return previousValue * (halfPerimetr - currentValue);
+    }, halfPerimetr)
+  ).toFixed(3);
 
-    isRectangular = (triangle[2] ** 2).toFixed(2) === (triangle[0] ** 2 + triangle[1] ** 2).toFixed(2);
+  isRectangular =
+    (triangle[2] ** 2).toFixed(2) ===
+    (triangle[0] ** 2 + triangle[1] ** 2).toFixed(2);
 
-    console.log('Square of a triangle: ' + square);
-    console.log('Triangle is rectangular?: ' + isRectangular);
+  console.log('Square of a triangle: ' + square);
+  console.log('Triangle is rectangular?: ' + isRectangular);
 } else {
-    console.log('Incorrect data');
+  console.log('Incorrect data');
 }
 
 // task-7
@@ -126,29 +134,29 @@ console.log('Current Time:' + currentTime);
 // first way
 console.log('Using multiple if...else statements.');
 
-if (currentTime >= 23 && currentTime < 5) {
-    console.log(msg[0]);
+if (currentTime >= 23 || currentTime < 5) {
+  console.log(msg[0]);
 } else if (currentTime >= 5 && currentTime < 11) {
-    console.log(msg[1]);
+  console.log(msg[1]);
 } else if (currentTime >= 11 && currentTime < 17) {
-    console.log(msg[2]);
+  console.log(msg[2]);
 } else {
-    console.log(msg[3]);
+  console.log(msg[3]);
 }
 
 // second way
 console.log('Using a switch statement.');
 
 switch (true) {
-    case currentTime >= 23 && currentTime < 5:
-        console.log(msg[0]);
-        break;
-    case currentTime >= 5 && currentTime < 11:
-        console.log(msg[1]);
-        break;
-    case currentTime >= 11 && currentTime < 17:
-        console.log(msg[2]);
-        break;
-    default:
-        console.log(msg[3]);
+  case currentTime >= 23 || currentTime < 5:
+    console.log(msg[0]);
+    break;
+  case currentTime >= 5 && currentTime < 11:
+    console.log(msg[1]);
+    break;
+  case currentTime >= 11 && currentTime < 17:
+    console.log(msg[2]);
+    break;
+  default:
+    console.log(msg[3]);
 }
