@@ -95,12 +95,33 @@ try {
 }
 
 // ----------task-4----------
-console.log('___task-3___');
+console.log('___task-4___');
 
 function showUser(id) {
+  if (id < 0) { // null, '', NaN were not considered.
+    throw new Error('ID must not be negative');
+  }
 
+  return {
+    id: id,
+  };
 }
 
 function showUsers(ids) {
+  const outputUsers = [];
 
+  ids.forEach((id) => {
+    console.log(id);
+    try {
+      outputUsers.push(showUser(id));
+    } catch (e) {
+      console.log(`${e.name}: ${e.message}: ${id}`);
+    }
+  });
+
+  return outputUsers;
 }
+
+const correctUsers = showUsers([7, -12, 44, 22]);
+
+console.log(JSON.stringify(correctUsers));
