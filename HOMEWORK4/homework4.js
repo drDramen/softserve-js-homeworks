@@ -110,8 +110,8 @@ function showUser(id) {
 function showUsers(ids) {
   const outputUsers = [];
 
-  ids.forEach((id) => {
-    console.log(id);
+  ids.forEach((id) => {2
+    
     try {
       outputUsers.push(showUser(id));
     } catch (e) {
