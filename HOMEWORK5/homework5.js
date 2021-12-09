@@ -102,7 +102,7 @@ class Worker {
     if (value < 0) throw new Error('Experience must be positive');
 
     this._experience = value;
-    Object.getPrototypeOf(this).constructor.sortedSalary();
+    this.constructor.sortedSalary();
   }
 
   get showExp() {
@@ -114,12 +114,12 @@ class Worker {
     this.dayRate = dayRate;
     this.workingDays = workingDays;
 
-    Object.getPrototypeOf(this).constructor.instancesOfWorker.push(this);
+    this.constructor.instancesOfWorker.push(this);
   }
 
   set dayRate(value) {
     this._dayRate = value;
-    Object.getPrototypeOf(this).constructor.sortedSalary();
+    this.constructor.sortedSalary();
   }
 
   get dayRate() {
@@ -128,7 +128,7 @@ class Worker {
 
   set workingDays(value) {
     this._workingDays = value;
-    Object.getPrototypeOf(this).constructor.sortedSalary();
+    this.constructor.sortedSalary();
   }
 
   get workingDays() {
