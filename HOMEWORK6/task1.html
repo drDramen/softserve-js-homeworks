@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homework 6, Task-1</title>
+</head>
+
+<body>
+  
+  <div id="test">First</div>
+
+  <script>
+    document.querySelector('#test').innerHTML = 'Last';
+    // document.getElementById('test').innerHTML = 'Last';
+    // document.getElementsByTagName('div').innerHTML = 'Last';
+    // document.body.children[0].innerHTML = 'Last';
+    //test.innerHTML = 'Last';
+
+    /*
+      Почему к элементу в JS можно обратиться по id напрямую?
+      Если элементу назначен специальный атрибут id, то можно получить его прямо по переменной с именем из значения id. Это поведение соответствует стандарту. Оно существует, в первую очередь, для совместимости, как осколок далёкого прошлого и не очень приветствуется, поскольку использует глобальные переменные. Браузер пытается помочь нам, смешивая пространства имён JS и DOM, но при этом возможны конфликты.
+
+      Желательно не использовать.
+    */
+
+  </script>
+</body>
+
+</html>
