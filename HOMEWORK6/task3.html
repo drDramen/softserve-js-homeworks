@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homework 6, Task-3</title>
+</head>
+
+<body>
+
+  <h2>Article header</h2>
+  <div id="text">
+    <p>First paragraph</p>
+    <p>Second paragraph</p>
+    <p>Third paragraph</p>
+  </div>
+  <p>Another text</p>
+
+  <script>
+    const elements = document.querySelectorAll('#text p')
+    const output = document.createElement('div');
+
+    elements.forEach((element, index) => {
+      let newElement = element.cloneNode();
+
+      newElement.innerHTML = `Selector text ${index}: ${element.innerHTML}`
+      output.append(newElement);
+    })
+
+    document.querySelector('#text + p').after(output);
+
+  </script>
+</body>
+
+</html>
