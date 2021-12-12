@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Homework 6, Task-4</title>
+</head>
+
+<body>
+  <ul id="list">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+  </ul>
+
+  <script>
+    const list = document.querySelector('#list');
+
+    //first way
+    function getInner(list, ...arg) {
+      return arg.map((e) => list[e - 1].innerHTML).join(', ');
+    }
+
+    alert(getInner(list.children, 1, 5, 2, 4, 3));
+
+    //second way
+    const firstElement = list.firstElementChild;
+    const lastElement = list.lastElementChild;
+    const secondElement = firstElement.nextElementSibling;
+    const fourthElement = lastElement.previousElementSibling;
+    const thirdElement = secondElement.nextElementSibling;
+
+    alert(`${firstElement.innerHTML}, ${lastElement.innerHTML}, ${secondElement.innerHTML}, ${fourthElement.innerHTML}, ${thirdElement.innerHTML}
+    `);
+
+  </script>
+</body>
+
+</html>
