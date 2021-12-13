@@ -70,17 +70,17 @@
 ## **Task-5.** Для сторінки:
 
     <body>
-          <h1>I'am a big header!!!</h1>
+      <h1>I'am a big header!!!</h1>
       <div id="myDiv">
-          <p>First paragraph</p>
-          <p>Second paragraph</p>
-          <p>Third paragraph</p>
-          <p>Fourth paragraph</p>
+        <p>First paragraph</p>
+        <p>Second paragraph</p>
+        <p>Third paragraph</p>
+        <p>Fourth paragraph</p>
       </div>
       <ul id="myList">
-          <li>Make</li>
-          <li>me</li>
-          <li>horizontal!</li>
+        <li>Make</li>
+        <li>me</li>
+        <li>horizontal!</li>
       </ul>
       <span>Make me invisible, please!</span>
     </body>
