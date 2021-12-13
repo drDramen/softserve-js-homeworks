@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Homework 6, Task-5</title>
+</head>
+
+<body>
+  <h1>I'am a big header!!!</h1>
+  <div id="myDiv">
+    <p>First paragraph</p>
+    <p>Second paragraph</p>
+    <p>Third paragraph</p>
+    <p>Fourth paragraph</p>
+  </div>
+  <ul id="myList">
+    <li>Make</li>
+    <li>me</li>
+    <li>horizontal!</li>
+  </ul>
+  <span>Make me invisible, please!</span>
+
+  <script>
+
+    const heading = document.querySelector('h1');
+    const paragraphs = document.querySelectorAll('#myDiv > p');
+    const list = document.querySelector('#myList');
+    const span = document.querySelector('span');
+
+
+    if (heading) {
+      heading.style.backgroundColor = '#90ee90';
+    }
+
+    if (paragraphs) {
+      paragraphs[0].style.fontWeight = '700';
+      paragraphs[1].style.color = '#f00';
+      paragraphs[2].style.textDecoration = 'underline';
+      paragraphs[3].style.fontStyle = 'italic';
+    }
+
+    if (list) {
+      list.style.listStyle = 'none';
+      list.style.display = 'flex';
+    }
+
+    if (span) {
+      span.style.visibility = 'hidden';
+      // span.style.display = 'none';
+      // span.style.opacity = 0;
+      // span.hidden = true;
+    }
+
+  </script>
+</body>
+
+</html>
