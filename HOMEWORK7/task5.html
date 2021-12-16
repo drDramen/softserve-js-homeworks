@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework 7, Task-5</title>
+  </head>
+  <body>
+    <button class="liveBtn" type="button">Live button!</button>
+    <div class="output"></div>
+
+    <script>
+      const liveBtn = document.querySelector('.liveBtn');
+      const output = document.querySelector('.output');
+
+      const insertParagraph = (text) => {
+        const p = document.createElement('p');
+        p.style.margin = 0;
+        p.innerText = text;
+        output.append(p);
+      };
+
+      liveBtn.onclick = () => insertParagraph('I was pressed!');
+      liveBtn.onmouseover = () => insertParagraph('Mouse on me!');
+      liveBtn.onmouseleave = () => insertParagraph('Mouse is not on me!');
+    </script>
+  </body>
+</html>
