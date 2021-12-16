@@ -37,9 +37,13 @@
         const country = checkCountry();
 
         getCities(country).forEach((e) => {
-          const option = document.createElement('option');
-          option.value = e;
-          option.text = e;
+          const option = new Option(e, e); //first way
+
+          //second way
+          // const option = document.createElement('option');
+          // option.value = e;
+          // option.text = e;
+          
           cities.add(option);
         });
       }
