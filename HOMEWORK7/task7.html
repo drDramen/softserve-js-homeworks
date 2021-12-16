@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework 7, Task-7</title>
+  </head>
+  <body>
+    <select name="country" id="country">
+      <option value="ger">Germany</option>
+      <option value="usa">USA</option>
+      <option value="ukr">Ukraine</option>
+    </select>
+
+    <select name="cities" id="cities"></select>
+    <p></p>
+    <script>
+      const countries = document.querySelector('#country');
+      const cities = document.querySelector('#cities');
+
+      const citiesList = {
+        ger: ['Berlin', 'Hamburg', 'Munich', 'Stuttgart'],
+        usa: ['New York', 'Los Angeles', 'Chicago', 'Houston'],
+        ukr: ['Kyiv', 'Kharkiv', 'Odesa', 'Khmelnytskyi'],
+      };
+
+      function checkCountry() {
+        return countries[countries.options.selectedIndex].value;
+      }
+
+      function getCities(country) {
+        return citiesList[country];
+      }
+
+      function fillCities() {
+        const country = checkCountry();
+
+        getCities(country).forEach((e) => {
+          const option = document.createElement('option');
+          option.value = e;
+          option.text = e;
+          cities.add(option);
+        });
+      }
+
+      function printCountryCity() {
+        const output = document.querySelector('p');
+        const country = countries[countries.options.selectedIndex].text;
+        const city = cities[cities.options.selectedIndex].text;
+
+        output.innerText = `${country}, ${city}`;
+      }
+
+      countries.onchange = () => {
+        while (cities.length > 0) {
+          cities.remove(0);
+        }
+        fillCities();
+        printCountryCity();
+      };
+
+      cities.onchange = () => {
+        printCountryCity();
+      };
+
+      fillCities();
+      printCountryCity();
+    </script>
+  </body>
+</html>
