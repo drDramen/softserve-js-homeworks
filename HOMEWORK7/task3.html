@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework 7, Task-3</title>
+  </head>
+  <body>
+    <button class="my-btn1" type="button">Click to make the page blue</button>
+    <button class="my-btn2" type="button">Click to make the page pink</button>
+    <button class="my-btn3" type="button">Click to make the page brown</button>
+    <a class="my-link" href="#">Hover over to make page yellow</a>
+    <script>
+      const btn1 = document.querySelector('.my-btn1');
+      const btn2 = document.querySelector('.my-btn2');
+      const btn3 = document.querySelector('.my-btn3');
+      const link = document.querySelector('.my-link');
+
+      const changeBgC = (color) => {
+        document.body.style.backgroundColor = color;
+      };
+
+      btn1.onclick = () => changeBgC('#0057d9');
+      btn2.ondblclick = () => changeBgC('#ff69b4');
+      btn3.onmousedown = () => changeBgC('#4b371c');
+      btn3.onmouseup = () => changeBgC('#fff');
+      link.onmouseover = () => changeBgC('#ff0');
+      link.onmouseleave = () => changeBgC('#fff');
+    </script>
+  </body>
+</html>
