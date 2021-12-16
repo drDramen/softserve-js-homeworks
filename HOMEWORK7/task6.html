@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework 7, Task-6</title>
+  </head>
+  <body>
+    <p class="outputDimensions"></p>
+    <script>
+      const outputDimensions = document.querySelector('.outputDimensions');
+      let timeDot = null;
+
+      const resizeEnd = () => {
+        outputDimensions.innerText = '';
+      };
+
+      window.onresize = () => {
+        outputDimensions.innerText = `Width: ${window.innerWidth}, Height: ${window.innerHeight}`;
+        clearTimeout(timeDot);
+        timeDot = setTimeout(resizeEnd, 1000);
+      };
+    </script>
+  </body>
+</html>
