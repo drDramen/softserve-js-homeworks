@@ -98,7 +98,7 @@ function checkLogin(str) {
   const regLogin = /^[A-Za-z](?:[A-Za-z]|(\d+(?:\.\d+)?))+$/;
   const regNumber = /\d+(\.\d+?)?/g;
 
-  const isValid = str.length <= 10 &&regLogin.test(str);
+  const isValid = str.length <= 10 && regLogin.test(str);
 
   const numbers = str.match(regNumber);
 
