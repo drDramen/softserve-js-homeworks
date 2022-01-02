@@ -30,19 +30,16 @@ console.log(age4); // 26
 console.log('___task-3___');
 
 function mul(...rest) {
-  //first way
   let sum = 0;
 
   for (const element of rest) {
     if (typeof element == 'number') {
-      sum += element;
+      sum = sum || 1;
+      sum *= element;
     }
   }
 
   return sum;
-
-  //second way
-  // return rest.filter((e) => typeof e == 'number').reduce((a, b) => a + b, 0);
 }
 
 console.log(mul(1, 'str', 2, 3, true)); // 6
