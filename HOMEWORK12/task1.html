@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework 12, Task-1</title>
+  </head>
+  <body>
+    <button class="vote-btn">Vote!</button>
+
+    <script>
+      const voteBtn = document.querySelector('.vote-btn');
+
+      voteBtn.addEventListener('click', request);
+
+      async function request() {
+        const response = await fetch('data/vote.txt');
+        const result = await response.text();
+        this.innerHTML = `${result}: ${new Date()}`;
+      }
+    </script>
+  </body>
+</html>
